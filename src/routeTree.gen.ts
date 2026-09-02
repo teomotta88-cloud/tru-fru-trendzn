@@ -12,22 +12,22 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrendRealTimeRouteImport } from './routes/trend-real-time'
 import { Route as TrendEvergreenRouteImport } from './routes/trend-evergreen'
 import { Route as TrendAttualiRouteImport } from './routes/trend-attuali'
-import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PianoEditorialeIndexRouteImport } from './routes/piano-editoriale.index'
 import { Route as InfluencerIndexRouteImport } from './routes/influencer.index'
 import { Route as CanaliInspoIndexRouteImport } from './routes/canali-inspo.index'
 import { Route as InfluencerIdRouteImport } from './routes/influencer.$id'
 import { Route as CanaliInspoIdRouteImport } from './routes/canali-inspo.$id'
+import { Route as ApiPublicHooksUpdateTrendScoreRouteImport } from './routes/api/public/hooks/update-trend-score'
 import { Route as ApiPublicHooksTriggerSyncCanaliFeedRouteImport } from './routes/api/public/hooks/trigger-sync-canali-feed'
+import { Route as ApiPublicHooksTrendsJsonRouteImport } from './routes/api/public/hooks/trends-json'
 import { Route as ApiPublicHooksTiktokOembedRouteImport } from './routes/api/public/hooks/tiktok-oembed'
 import { Route as ApiPublicHooksSubmitManualRouteImport } from './routes/api/public/hooks/submit-manual'
+import { Route as ApiPublicHooksScrapeInstagramProfileRouteImport } from './routes/api/public/hooks/scrape-instagram-profile'
 import { Route as ApiPublicHooksLinkPreviewRouteImport } from './routes/api/public/hooks/link-preview'
 import { Route as ApiPublicHooksDeleteTrendSubmissionRouteImport } from './routes/api/public/hooks/delete-trend-submission'
 import { Route as ApiPublicHooksDeleteCanaleRouteImport } from './routes/api/public/hooks/delete-canale'
 import { Route as ApiPublicHooksAddClientChannelRouteImport } from './routes/api/public/hooks/add-client-channel'
-import { Route as ApiPublicHooksScrapeInstagramProfileRouteImport } from './routes/api/public/hooks/scrape-instagram-profile'
-import { Route as ApiPublicHooksUpdateTrendScoreRouteImport } from './routes/api/public/hooks/update-trend-score'
-import { Route as ApiPublicHooksTrendsJsonRouteImport } from './routes/api/public/hooks/trends-json'
 
 const TrendRealTimeRoute = TrendRealTimeRouteImport.update({
   id: '/trend-real-time',
@@ -44,14 +44,14 @@ const TrendAttualiRoute = TrendAttualiRouteImport.update({
   path: '/trend-attuali',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PianoEditorialeIndexRoute = PianoEditorialeIndexRouteImport.update({
-  id: '/piano-editoriale/',
-  path: '/piano-editoriale/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PianoEditorialeIndexRoute = PianoEditorialeIndexRouteImport.update({
+  id: '/piano-editoriale/',
+  path: '/piano-editoriale/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfluencerIndexRoute = InfluencerIndexRouteImport.update({
@@ -74,10 +74,22 @@ const CanaliInspoIdRoute = CanaliInspoIdRouteImport.update({
   path: '/canali-inspo/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksUpdateTrendScoreRoute =
+  ApiPublicHooksUpdateTrendScoreRouteImport.update({
+    id: '/api/public/hooks/update-trend-score',
+    path: '/api/public/hooks/update-trend-score',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksTriggerSyncCanaliFeedRoute =
   ApiPublicHooksTriggerSyncCanaliFeedRouteImport.update({
     id: '/api/public/hooks/trigger-sync-canali-feed',
     path: '/api/public/hooks/trigger-sync-canali-feed',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksTrendsJsonRoute =
+  ApiPublicHooksTrendsJsonRouteImport.update({
+    id: '/api/public/hooks/trends-json',
+    path: '/api/public/hooks/trends-json',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksTiktokOembedRoute =
@@ -90,6 +102,12 @@ const ApiPublicHooksSubmitManualRoute =
   ApiPublicHooksSubmitManualRouteImport.update({
     id: '/api/public/hooks/submit-manual',
     path: '/api/public/hooks/submit-manual',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksScrapeInstagramProfileRoute =
+  ApiPublicHooksScrapeInstagramProfileRouteImport.update({
+    id: '/api/public/hooks/scrape-instagram-profile',
+    path: '/api/public/hooks/scrape-instagram-profile',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ApiPublicHooksLinkPreviewRoute =
@@ -116,23 +134,6 @@ const ApiPublicHooksAddClientChannelRoute =
     path: '/api/public/hooks/add-client-channel',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ApiPublicHooksScrapeInstagramProfileRoute =
-  ApiPublicHooksScrapeInstagramProfileRouteImport.update({
-    id: '/api/public/hooks/scrape-instagram-profile',
-    path: '/api/public/hooks/scrape-instagram-profile',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicHooksUpdateTrendScoreRoute =
-  ApiPublicHooksUpdateTrendScoreRouteImport.update({
-    id: '/api/public/hooks/update-trend-score',
-    path: '/api/public/hooks/update-trend-score',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicHooksTrendsJsonRoute = ApiPublicHooksTrendsJsonRouteImport.update({
-  id: '/api/public/hooks/trends-json',
-  path: '/api/public/hooks/trends-json',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -145,15 +146,15 @@ export interface FileRoutesByFullPath {
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
-  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
-  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
-  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
+  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -166,15 +167,15 @@ export interface FileRoutesByTo {
   '/influencer': typeof InfluencerIndexRoute
   '/piano-editoriale': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
-  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
-  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
-  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
+  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -188,15 +189,15 @@ export interface FileRoutesById {
   '/influencer/': typeof InfluencerIndexRoute
   '/piano-editoriale/': typeof PianoEditorialeIndexRoute
   '/api/public/hooks/add-client-channel': typeof ApiPublicHooksAddClientChannelRoute
-  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
-  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
-  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/delete-canale': typeof ApiPublicHooksDeleteCanaleRoute
   '/api/public/hooks/delete-trend-submission': typeof ApiPublicHooksDeleteTrendSubmissionRoute
   '/api/public/hooks/link-preview': typeof ApiPublicHooksLinkPreviewRoute
+  '/api/public/hooks/scrape-instagram-profile': typeof ApiPublicHooksScrapeInstagramProfileRoute
   '/api/public/hooks/submit-manual': typeof ApiPublicHooksSubmitManualRoute
   '/api/public/hooks/tiktok-oembed': typeof ApiPublicHooksTiktokOembedRoute
+  '/api/public/hooks/trends-json': typeof ApiPublicHooksTrendsJsonRoute
   '/api/public/hooks/trigger-sync-canali-feed': typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  '/api/public/hooks/update-trend-score': typeof ApiPublicHooksUpdateTrendScoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -211,15 +212,15 @@ export interface FileRouteTypes {
     | '/influencer/'
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
-    | '/api/public/hooks/scrape-instagram-profile'
-    | '/api/public/hooks/update-trend-score'
-    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/scrape-instagram-profile'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/tiktok-oembed'
+    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-trend-score'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -232,15 +233,15 @@ export interface FileRouteTypes {
     | '/influencer'
     | '/piano-editoriale'
     | '/api/public/hooks/add-client-channel'
-    | '/api/public/hooks/scrape-instagram-profile'
-    | '/api/public/hooks/update-trend-score'
-    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/scrape-instagram-profile'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/tiktok-oembed'
+    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-trend-score'
   id:
     | '__root__'
     | '/'
@@ -253,15 +254,15 @@ export interface FileRouteTypes {
     | '/influencer/'
     | '/piano-editoriale/'
     | '/api/public/hooks/add-client-channel'
-    | '/api/public/hooks/scrape-instagram-profile'
-    | '/api/public/hooks/update-trend-score'
-    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/delete-canale'
     | '/api/public/hooks/delete-trend-submission'
     | '/api/public/hooks/link-preview'
+    | '/api/public/hooks/scrape-instagram-profile'
     | '/api/public/hooks/submit-manual'
     | '/api/public/hooks/tiktok-oembed'
+    | '/api/public/hooks/trends-json'
     | '/api/public/hooks/trigger-sync-canali-feed'
+    | '/api/public/hooks/update-trend-score'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -275,15 +276,15 @@ export interface RootRouteChildren {
   InfluencerIndexRoute: typeof InfluencerIndexRoute
   PianoEditorialeIndexRoute: typeof PianoEditorialeIndexRoute
   ApiPublicHooksAddClientChannelRoute: typeof ApiPublicHooksAddClientChannelRoute
-  ApiPublicHooksScrapeInstagramProfileRoute: typeof ApiPublicHooksScrapeInstagramProfileRoute
-  ApiPublicHooksUpdateTrendScoreRoute: typeof ApiPublicHooksUpdateTrendScoreRoute
-  ApiPublicHooksTrendsJsonRoute: typeof ApiPublicHooksTrendsJsonRoute
   ApiPublicHooksDeleteCanaleRoute: typeof ApiPublicHooksDeleteCanaleRoute
   ApiPublicHooksDeleteTrendSubmissionRoute: typeof ApiPublicHooksDeleteTrendSubmissionRoute
   ApiPublicHooksLinkPreviewRoute: typeof ApiPublicHooksLinkPreviewRoute
+  ApiPublicHooksScrapeInstagramProfileRoute: typeof ApiPublicHooksScrapeInstagramProfileRoute
   ApiPublicHooksSubmitManualRoute: typeof ApiPublicHooksSubmitManualRoute
   ApiPublicHooksTiktokOembedRoute: typeof ApiPublicHooksTiktokOembedRoute
+  ApiPublicHooksTrendsJsonRoute: typeof ApiPublicHooksTrendsJsonRoute
   ApiPublicHooksTriggerSyncCanaliFeedRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRoute
+  ApiPublicHooksUpdateTrendScoreRoute: typeof ApiPublicHooksUpdateTrendScoreRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -309,18 +310,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TrendAttualiRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/piano-editoriale/': {
-      id: '/piano-editoriale/'
-      path: '/piano-editoriale'
-      fullPath: '/piano-editoriale/'
-      preLoaderRoute: typeof PianoEditorialeIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/piano-editoriale/': {
+      id: '/piano-editoriale/'
+      path: '/piano-editoriale'
+      fullPath: '/piano-editoriale/'
+      preLoaderRoute: typeof PianoEditorialeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/influencer/': {
@@ -351,11 +352,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CanaliInspoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/update-trend-score': {
+      id: '/api/public/hooks/update-trend-score'
+      path: '/api/public/hooks/update-trend-score'
+      fullPath: '/api/public/hooks/update-trend-score'
+      preLoaderRoute: typeof ApiPublicHooksUpdateTrendScoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/trigger-sync-canali-feed': {
       id: '/api/public/hooks/trigger-sync-canali-feed'
       path: '/api/public/hooks/trigger-sync-canali-feed'
       fullPath: '/api/public/hooks/trigger-sync-canali-feed'
       preLoaderRoute: typeof ApiPublicHooksTriggerSyncCanaliFeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/trends-json': {
+      id: '/api/public/hooks/trends-json'
+      path: '/api/public/hooks/trends-json'
+      fullPath: '/api/public/hooks/trends-json'
+      preLoaderRoute: typeof ApiPublicHooksTrendsJsonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/tiktok-oembed': {
@@ -370,6 +385,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/hooks/submit-manual'
       fullPath: '/api/public/hooks/submit-manual'
       preLoaderRoute: typeof ApiPublicHooksSubmitManualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/scrape-instagram-profile': {
+      id: '/api/public/hooks/scrape-instagram-profile'
+      path: '/api/public/hooks/scrape-instagram-profile'
+      fullPath: '/api/public/hooks/scrape-instagram-profile'
+      preLoaderRoute: typeof ApiPublicHooksScrapeInstagramProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/hooks/link-preview': {
@@ -400,27 +422,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksAddClientChannelRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/hooks/scrape-instagram-profile': {
-      id: '/api/public/hooks/scrape-instagram-profile'
-      path: '/api/public/hooks/scrape-instagram-profile'
-      fullPath: '/api/public/hooks/scrape-instagram-profile'
-      preLoaderRoute: typeof ApiPublicHooksScrapeInstagramProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/hooks/update-trend-score': {
-      id: '/api/public/hooks/update-trend-score'
-      path: '/api/public/hooks/update-trend-score'
-      fullPath: '/api/public/hooks/update-trend-score'
-      preLoaderRoute: typeof ApiPublicHooksUpdateTrendScoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/hooks/trends-json': {
-      id: '/api/public/hooks/trends-json'
-      path: '/api/public/hooks/trends-json'
-      fullPath: '/api/public/hooks/trends-json'
-      preLoaderRoute: typeof ApiPublicHooksTrendsJsonRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -435,18 +436,29 @@ const rootRouteChildren: RootRouteChildren = {
   InfluencerIndexRoute: InfluencerIndexRoute,
   PianoEditorialeIndexRoute: PianoEditorialeIndexRoute,
   ApiPublicHooksAddClientChannelRoute: ApiPublicHooksAddClientChannelRoute,
-  ApiPublicHooksScrapeInstagramProfileRoute: ApiPublicHooksScrapeInstagramProfileRoute,
-  ApiPublicHooksUpdateTrendScoreRoute: ApiPublicHooksUpdateTrendScoreRoute,
-  ApiPublicHooksTrendsJsonRoute: ApiPublicHooksTrendsJsonRoute,
   ApiPublicHooksDeleteCanaleRoute: ApiPublicHooksDeleteCanaleRoute,
   ApiPublicHooksDeleteTrendSubmissionRoute:
     ApiPublicHooksDeleteTrendSubmissionRoute,
   ApiPublicHooksLinkPreviewRoute: ApiPublicHooksLinkPreviewRoute,
+  ApiPublicHooksScrapeInstagramProfileRoute:
+    ApiPublicHooksScrapeInstagramProfileRoute,
   ApiPublicHooksSubmitManualRoute: ApiPublicHooksSubmitManualRoute,
   ApiPublicHooksTiktokOembedRoute: ApiPublicHooksTiktokOembedRoute,
+  ApiPublicHooksTrendsJsonRoute: ApiPublicHooksTrendsJsonRoute,
   ApiPublicHooksTriggerSyncCanaliFeedRoute:
     ApiPublicHooksTriggerSyncCanaliFeedRoute,
+  ApiPublicHooksUpdateTrendScoreRoute: ApiPublicHooksUpdateTrendScoreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
