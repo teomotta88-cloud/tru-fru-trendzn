@@ -24,7 +24,7 @@ import {
 // Placeholder mostrato finché non c'è ancora un canale cliente Instagram
 // scrapato con successo in "Canali cliente" — non è mai il profilo reale.
 const FALLBACK_PROFILE = {
-  avatar: "/brand/nostromo-logo.png",
+  avatar: "/brand/trufru-logo.svg",
   handle: "iltuobrand",
   name: "Il tuo brand",
   bio: "Collega un canale cliente Instagram in \"Canali cliente\" per vedere qui il profilo reale.",

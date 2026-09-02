@@ -64,7 +64,7 @@ function Index() {
             Social trend watcher
           </span>
           <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
-            NOSTROMO! Tutti i trend social, in un posto solo.
+            TRÜ FRÜ! Tutti i trend social, in un posto solo.
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg">
             Il radar trend social di trüfrü.
