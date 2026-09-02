@@ -5,7 +5,7 @@ import { ArrowRight, Zap, TrendingUp, Sparkles, CalendarDays } from "lucide-reac
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nostromo — Trend social & canali inspo" },
+      { title: "Trendzn × trüfrü — Trend social & canali inspo" },
       {
         name: "description",
         content:
@@ -67,7 +67,7 @@ function Index() {
             NOSTROMO! Tutti i trend social, in un posto solo.
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg">
-            Il radar trend social di Nostromo.
+            Il radar trend social di trüfrü.
           </p>
         </div>
       </section>
