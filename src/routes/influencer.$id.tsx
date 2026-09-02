@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/influencer/$id")({
   head: () => ({
-    meta: [{ title: "Talent Monitoring — Nostromo" }, { name: "description", content: "Profilo influencer monitorato." }],
+    meta: [{ title: "Talent Monitoring — Trü Frü" }, { name: "description", content: "Profilo influencer monitorato." }],
   }),
   component: Page,
 });

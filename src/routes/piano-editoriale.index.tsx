@@ -21,7 +21,7 @@ import { ClientChannelsPanel } from "@/components/PianoEditoriale/ClientChannels
 export const Route = createFileRoute("/piano-editoriale/")({
   head: () => ({
     meta: [
-      { title: "Piano Editoriale — Nostromo" },
+      { title: "Piano Editoriale — Trü Frü" },
       {
         name: "description",
         content: "Calendario editoriale mensile con copy, visual e approvazioni.",

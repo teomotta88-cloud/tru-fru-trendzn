@@ -9,7 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/canali-inspo/")({
   head: () => ({
     meta: [
-      { title: "Canali Inspo — Nostromo" },
+      { title: "Canali Inspo — Trü Frü" },
       {
         name: "description",
         content: "Bacheca di account e siti da seguire per inspo social, format, meme e real time marketing.",

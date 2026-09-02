@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/canali-inspo/$id")({
   head: () => ({
-    meta: [{ title: "Canale — Nostromo" }, { name: "description", content: "Canale di ispirazione social." }],
+    meta: [{ title: "Canale — Trü Frü" }, { name: "description", content: "Canale di ispirazione social." }],
   }),
   component: Page,
 });

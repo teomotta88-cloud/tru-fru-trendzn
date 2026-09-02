@@ -8,7 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/trend-real-time")({
   head: () => ({
-    meta: [{ title: "Trend to Act — Nostromo" }],
+    meta: [{ title: "Trend to Act — Trü Frü" }],
   }),
   component: Page,
 });

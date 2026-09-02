@@ -8,7 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/influencer/")({
   head: () => ({
     meta: [
-      { title: "Talent Monitoring — Nostromo" },
+      { title: "Talent Monitoring — Trü Frü" },
       {
         name: "description",
         content: "Profili influencer monitorati automaticamente, organizzati per cliente.",
