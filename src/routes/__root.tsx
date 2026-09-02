@@ -69,13 +69,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Nostromo — Trend social & canali inspo" },
+      { title: "Trendzn × trüfrü — Trend social & canali inspo" },
       {
         name: "description",
         content:
           "Esplora trend social real time, trend attuali e canali di ispirazione, filtrabili per industry, piattaforma e categoria.",
       },
-      { property: "og:title", content: "Nostromo — Trend social & canali inspo" },
+      { property: "og:title", content: "Trendzn × trüfrü — Trend social & canali inspo" },
       {
         property: "og:description",
         content:
@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Nostromo — Trend social & canali inspo" },
+      { name: "twitter:title", content: "Trendzn × trüfrü — Trend social & canali inspo" },
       {
         name: "twitter:description",
         content:
@@ -92,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/brand/favicon.png" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -148,7 +148,7 @@ function Navbar() {
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <img src="/brand/logo-full-v2.png" alt="Trendzn" className="h-7 w-auto" />
           <span className="font-display text-sm font-semibold text-muted-foreground">x</span>
-          <img src="/brand/nostromo-logo.png" alt="Nostromo" className="h-9 w-auto" />
+          <img src="/brand/trufru-logo.svg" alt="trüfrü" className="h-6 w-auto" />
         </Link>
 
         {/* Desktop nav */}
