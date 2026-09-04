@@ -19,13 +19,12 @@ type FieldConfig = {
 // Stessa mappatura semantica usata in poll-gmail.ts per ogni sezione:
 // [tag1]=categoria (fissa), [tag2]=industry, [tag3]=title/descrizione
 const SECTION_FIELDS: Record<Section, FieldConfig[]> = {
-  "trend-real-time": [{ key: "industry", label: "Target", placeholder: "", required: false, type: "select", options: TARGET_OPTIONS }],
-  "trend-attuali": [{ key: "industry", label: "Target", placeholder: "", required: false, type: "select", options: TARGET_OPTIONS }],
-  "trend-evergreen": [{ key: "industry", label: "Target", placeholder: "", required: false, type: "select", options: TARGET_OPTIONS }],
+  "trend-real-time": [],
+  "trend-attuali": [],
+  "trend-evergreen": [],
   "canali-inspo": [{ key: "title", label: "Nome canale", placeholder: "es. Format interviste", required: false }],
   influencer: [
     { key: "industry", label: "Nome influencer", placeholder: "es. Chiara Ferragni", required: false },
-    { key: "title", label: "Cliente", placeholder: "es. Bionorica", required: false },
   ],
 };
 
