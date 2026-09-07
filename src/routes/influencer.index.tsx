@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { PlatformIcon } from "@/components/SocialEmbed";
-import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -251,7 +250,6 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
             Profili influencer monitorati automaticamente, organizzati per cliente.
           </p>
         </div>
-        <ManualSubmitDialog section="influencer" onSuccess={handleManualSuccess} />
       </header>
 
       {tab !== undefined && setTab && (

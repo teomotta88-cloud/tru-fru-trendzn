@@ -3,12 +3,11 @@ import { useEffect, useState, useCallback } from "react";
 import { trendAttuali } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
-import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { supabase } from "@/integrations/supabase/client";
 
-export const Route = createFileRoute("/trend-attuali")({
+export const Route = createFileRoute("/tru-world")({
   head: () => ({
-    meta: [{ title: "Trend to Adapt — Trü Frü" }],
+    meta: [{ title: "TRÜ WORLD — Trü Frü" }],
   }),
   component: Page,
 });
@@ -77,13 +76,12 @@ function Page() {
     <div className="space-y-8">
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">Trend to Adapt</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ WORLD</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
             Da realizzare entro 2-4 settimane. Trend social (TT o IG) con durata un po' più lunga.{"\n"}
             Reinterpretabili e adattabili al Tone of Voice e all'identity del brand.
           </p>
         </div>
-        <ManualSubmitDialog section="trend-attuali" onSuccess={fetchRows} />
       </header>
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>

@@ -19,22 +19,22 @@ export const Route = createFileRoute("/")({
 function Index() {
   const cards = [
     {
-      to: "/trend-real-time",
-      label: "Trend to Act",
+      to: "/tru-taste",
+      label: "TRÜ TASTE",
       //count: trendRealTime.length,
       icon: Zap,
       blurb: "Da realizzare in 1–2 giorni. Velocità più che crafting.",
     },
     {
-      to: "/trend-attuali",
-      label: "Trend to Adapt",
+      to: "/tru-world",
+      label: "TRÜ WORLD",
       //count: trendAttuali.length,
       icon: TrendingUp,
       blurb: "Trend social di IG/TikTok con durata 2-4 settimane.",
     },
     {
-      to: "/trend-evergreen",
-      label: "Cultural Formats",
+      to: "/tru-people",
+      label: "TRU PEOPLE",
       // count: trendEvergreen.length,
       icon: Sparkles,
       blurb: "Trend senza scadenza, che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.",
