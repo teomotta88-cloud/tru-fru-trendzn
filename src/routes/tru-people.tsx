@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import { trendEvergreen } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
+import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/tru-people")({
@@ -81,6 +82,7 @@ function Page() {
             Contenuti duraturi che oggi sono diventati parte di un vero e proprio linguaggio dei social e che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.
           </p>
         </div>
+        <ManualSubmitDialog section="trend-evergreen" onSuccess={fetchRows} />
       </header>
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>
