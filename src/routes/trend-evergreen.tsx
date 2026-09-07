@@ -3,12 +3,11 @@ import { useEffect, useState, useCallback } from "react";
 import { trendEvergreen } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
-import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { supabase } from "@/integrations/supabase/client";
 
-export const Route = createFileRoute("/trend-evergreen")({
+export const Route = createFileRoute("/tru-people")({
   head: () => ({
-    meta: [{ title: "Cultural Formats — Trü Frü" }],
+    meta: [{ title: "TRU PEOPLE — Trü Frü" }],
   }),
   component: Page,
 });
@@ -77,12 +76,11 @@ function Page() {
     <div className="space-y-8">
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">Cultural Formats</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">TRU PEOPLE</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
             Contenuti duraturi che oggi sono diventati parte di un vero e proprio linguaggio dei social e che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.
           </p>
         </div>
-        <ManualSubmitDialog section="trend-evergreen" onSuccess={fetchRows} />
       </header>
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>
