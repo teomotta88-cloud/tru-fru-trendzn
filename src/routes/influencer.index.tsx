@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { PlatformIcon } from "@/components/SocialEmbed";
+import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/influencer/")({
   head: () => ({
     meta: [
-      { title: "Talent Monitoring — Trü Frü" },
+      { title: "Competitor — Trü Frü" },
       {
         name: "description",
-        content: "Profili influencer monitorati automaticamente, organizzati per cliente.",
+        content: "Competitor analysis - Profili brand e competitor monitorati.",
       },
     ],
   }),
@@ -235,7 +236,7 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
     return (
       <div className="space-y-8">
         <header className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">Talent Monitoring</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Competitor</h1>
         </header>
         <div className="text-sm text-muted-foreground">Caricamento profili…</div>
       </div>
@@ -245,11 +246,12 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
     <div className="space-y-8">
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">Talent Monitoring</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">Competitor</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Profili influencer monitorati automaticamente, organizzati per cliente.
+            Brand e competitor monitorati automaticamente.
           </p>
         </div>
+        <ManualSubmitDialog section="influencer" onSuccess={handleManualSuccess} />
       </header>
 
       {tab !== undefined && setTab && (
