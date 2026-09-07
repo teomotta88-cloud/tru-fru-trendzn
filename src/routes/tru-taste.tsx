@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import { trendRealTime } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
+import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/tru-taste")({
@@ -82,6 +83,7 @@ function Page() {
             Conta più la velocità di realizzazione che il crafting minuzioso.
           </p>
         </div>
+        <ManualSubmitDialog section="trend-real-time" onSuccess={fetchRows} />
       </header>
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>
