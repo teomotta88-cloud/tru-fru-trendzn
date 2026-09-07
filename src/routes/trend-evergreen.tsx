@@ -76,7 +76,7 @@ function Page() {
     <div className="space-y-8">
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">TRU PEOPLE</h1>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ PEOPLE</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
             Contenuti duraturi che oggi sono diventati parte di un vero e proprio linguaggio dei social e che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.
           </p>

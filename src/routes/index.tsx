@@ -34,7 +34,7 @@ function Index() {
     },
     {
       to: "/tru-people",
-      label: "TRU PEOPLE",
+      label: "TRÜ PEOPLE",
       // count: trendEvergreen.length,
       icon: Sparkles,
       blurb: "Trend senza scadenza, che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.",
