@@ -131,9 +131,9 @@ function RootComponent() {
 
 const NAV_ITEMS = [
   { to: "/", label: "Home" },
-  { to: "/trend-real-time", label: "Trend to Act" },
-  { to: "/trend-attuali", label: "Trend to Adapt" },
-  { to: "/trend-evergreen", label: "Cultural Formats" },
+  { to: "/tru-taste", label: "TRÜ TASTE" },
+  { to: "/tru-world", label: "TRÜ WORLD" },
+  { to: "/tru-people", label: "TRÜ PEOPLE" },
   { to: "/influencer", label: "Talent Monitoring" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];
