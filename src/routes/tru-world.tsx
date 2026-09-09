@@ -3,7 +3,6 @@ import { useEffect, useState, useCallback } from "react";
 import { trendAttuali } from "@/lib/trends";
 import type { TrendItem } from "@/lib/trends";
 import { TrendGrid } from "@/components/TrendGrid";
-import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/tru-world")({
@@ -75,19 +74,16 @@ function Page() {
 
   return (
     <div className="space-y-8">
-      <header className="flex flex-wrap items-start justify-between gap-4">
-        <div className="space-y-2">
-          <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ WORLD</h1>
-          <p className="max-w-2xl text-sm text-muted-foreground">
-            Un universo visivo che valorizza l'iconico pack Trü Frü e tutto ciò che rappresenta: qualità premium, ingredienti reali ed esperienza indulgente. Il brand diventa protagonista, simbolo di piacere autentico e distintivo.
-          </p>
-        </div>
-        <ManualSubmitDialog section="trend-attuali" onSuccess={fetchRows} />
-      </header>
+      <div className="space-y-2">
+        <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ WORLD</h1>
+        <p className="max-w-2xl text-sm text-muted-foreground">
+          Un universo visivo che valorizza l'iconico pack Trü Frü e tutto ciò che rappresenta: qualità premium, ingredienti reali ed esperienza indulgente. Il brand diventa protagonista, simbolo di piacere autentico e distintivo.
+        </p>
+      </div>
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>
       ) : (
-        <TrendGrid items={allItems} dbIds={dbIds} onDelete={handleDelete} onScoreChange={handleScoreChange} showScore hideCategoryFilter />
+        <TrendGrid items={allItems} dbIds={dbIds} onDelete={handleDelete} onScoreChange={handleScoreChange} showScore hideCategoryFilter hideCategory hideScoreFilter />
       )}
     </div>
   );

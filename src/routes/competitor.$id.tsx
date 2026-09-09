@@ -4,9 +4,9 @@ import { detectPlatform } from "@/lib/trends";
 import { SocialEmbed, PlatformIcon } from "@/components/SocialEmbed";
 import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
-export const Route = createFileRoute("/influencer/$id")({
+export const Route = createFileRoute("/competitor/$id")({
   head: () => ({
-    meta: [{ title: "Competitor Monitoring — Trü Frü" }, { name: "description", content: "Profili competitor monitorato." }],
+    meta: [{ title: "Competitor — Trü Frü" }, { name: "description", content: "Profilo competitor monitorato." }],
   }),
   component: Page,
 });

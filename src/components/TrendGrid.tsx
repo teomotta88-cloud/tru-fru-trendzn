@@ -17,6 +17,8 @@ type Props = {
   onScoreChange?: (url: string, score: number | null) => void;
   showScore?: boolean;
   hideCategoryFilter?: boolean;
+  hideCategory?: boolean;
+  hideScoreFilter?: boolean;
 };
 
 type SortKey = "date-desc" | "date-asc" | "score-desc" | "score-asc";
@@ -90,6 +92,8 @@ export function TrendGrid({
   onScoreChange,
   showScore = false,
   hideCategoryFilter = false,
+  hideCategory = false,
+  hideScoreFilter = false,
 }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string>("");
@@ -223,7 +227,7 @@ export function TrendGrid({
         {!hideCategoryFilter && <Select label="Categoria" value={category} onChange={setCategory} options={categories} />}
         <Select label={hideCategoryFilter ? "Categoria" : "Industry"} value={industry} onChange={setIndustry} options={industries} />
         <Select label="Piattaforma" value={platform} onChange={setPlatform} options={platforms} />
-        {showScore && <Select label="Score" value={scoreFilter} onChange={setScoreFilter} options={["1", "2", "3"]} />}
+        {showScore && !hideScoreFilter && <Select label="Score" value={scoreFilter} onChange={setScoreFilter} options={["1", "2", "3"]} />}
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value as SortKey)}
@@ -279,7 +283,7 @@ export function TrendGrid({
                 )}
                 <div className="space-y-2 px-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    {item.category && (
+                    {!hideCategory && item.category && (
                       <span className="inline-block rounded-full bg-primary/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
                         {item.category}
                       </span>

@@ -1,11 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { PlatformIcon } from "@/components/SocialEmbed";
-import { ManualSubmitDialog } from "@/components/ManualSubmitDialog";
 import { Search, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-export const Route = createFileRoute("/influencer/")({
+export const Route = createFileRoute("/competitor/")({
   head: () => ({
     meta: [
       { title: "Competitor — Trü Frü" },
@@ -15,7 +14,7 @@ export const Route = createFileRoute("/influencer/")({
       },
     ],
   }),
-  component: InfluencerPage,
+  component: CompetitorPage,
 });
 
 const TRENDS_JSON_URL = "/api/public/hooks/trends-json";
@@ -64,12 +63,12 @@ function InfluencerToggle({ tab, setTab }: { tab: Tab; setTab: (t: Tab) => void 
   );
 }
 
-function InfluencerPage() {
+function CompetitorPage() {
   const [tab, setTab] = useState<Tab>("profili");
   return tab === "profili" ? (
-    <InfluencerView tab={tab} setTab={setTab} />
+    <CompetitorView tab={tab} setTab={setTab} />
   ) : (
-    <InfluencerFeedView tab={tab} setTab={setTab} />
+    <CompetitorFeedView tab={tab} setTab={setTab} />
   );
 }
 
@@ -110,7 +109,7 @@ function rowToProfile(row: DbRow): InfluencerProfile {
   };
 }
 
-function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void }) {
+function CompetitorView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void }) {
   const [q, setQ] = useState("");
   const [plat, setPlat] = useState("");
   const [targetFilter, setTargetFilter] = useState("");
@@ -251,7 +250,6 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
             Brand e competitor monitorati automaticamente.
           </p>
         </div>
-        <ManualSubmitDialog section="influencer" onSuccess={handleManualSuccess} />
       </header>
 
       {tab !== undefined && setTab && (
@@ -374,7 +372,7 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
                 if (isJsonProfile) {
                   return (
                     <Link
-                      to="/influencer/$id"
+                      to="/competitor/$id"
                       params={{ id: c.id }}
                       className={cardClassName}
                     >
@@ -796,7 +794,7 @@ function DateRangeFilter({
 
 const PAGE_SIZE = 12;
 
-function InfluencerFeedView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void }) {
+function CompetitorFeedView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void }) {
   const [data, setData] = useState<TrendsData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [platformFilter, setPlatformFilter] = useState("tutti");
