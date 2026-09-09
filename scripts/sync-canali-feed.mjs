@@ -12,7 +12,7 @@
 // Eseguito da .github/workflows/sync-canali-feed.yml su schedule (ogni 3h)
 // o manualmente via workflow_dispatch.
 
-const REPO = "teomotta88-cloud/nostromo-trendzn";
+const REPO = "teomotta88-cloud/tru-fru-trendzn";
 const TRENDS_PATH = "src/data/trends.json";
 const RSS_BRIDGE_BASE = process.env.RSS_BRIDGE_BASE || "http://localhost:3000/";
 const MAX_POSTS_PER_CHANNEL = 15;
