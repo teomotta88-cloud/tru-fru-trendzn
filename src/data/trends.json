@@ -3,5 +3,99 @@
   "trend_attuali": [],
   "trend_evergreen": [],
   "canali_inspo": [],
-  "influencer_profiles": []
+  "influencer_profiles": [
+    {
+      "id": "mymochi",
+      "name": "mymochi",
+      "cliente": null,
+      "urls": [
+        "https://www.instagram.com/mymochi/",
+        "https://www.tiktok.com/@mymochi/"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "instagram",
+          "handle": "mymochi",
+          "url": "https://www.instagram.com/mymochi/"
+        },
+        {
+          "platform": "tiktok",
+          "handle": "mymochi",
+          "url": "https://www.tiktok.com/@mymochi/"
+        }
+      ]
+    },
+    {
+      "id": "schofrulade",
+      "name": "schofrulade",
+      "cliente": null,
+      "urls": [
+        "https://www.instagram.com/schofrulade/"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "instagram",
+          "handle": "schofrulade",
+          "url": "https://www.instagram.com/schofrulade/"
+        }
+      ]
+    },
+    {
+      "id": "franui.ok",
+      "name": "franui.ok",
+      "cliente": null,
+      "urls": [
+        "https://www.tiktok.com/@franui.ok/"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "tiktok",
+          "handle": "franui.ok",
+          "url": "https://www.tiktok.com/@franui.ok/"
+        }
+      ]
+    },
+    {
+      "id": "franui.it",
+      "name": "franui.it",
+      "cliente": null,
+      "urls": [
+        "https://www.instagram.com/franui.it/"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "instagram",
+          "handle": "franui.it",
+          "url": "https://www.instagram.com/franui.it/"
+        }
+      ]
+    },
+    {
+      "id": "trufru",
+      "name": "trufru",
+      "cliente": null,
+      "urls": [
+        "https://www.tiktok.com/@trufru/",
+        "https://www.instagram.com/trufru/"
+      ],
+      "descrizione": null,
+      "accounts": [
+        {
+          "platform": "tiktok",
+          "handle": "trufru",
+          "url": "https://www.tiktok.com/@trufru/"
+        },
+        {
+          "platform": "instagram",
+          "handle": "trufru",
+          "url": "https://www.instagram.com/trufru/"
+        }
+      ]
+    }
+  ],
+  "canali_cliente": []
 }
