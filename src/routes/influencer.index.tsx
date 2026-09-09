@@ -57,7 +57,7 @@ function InfluencerToggle({ tab, setTab }: { tab: Tab; setTab: (t: Tab) => void 
               : "text-muted-foreground hover:text-foreground"
           }`}
         >
-          {t === "profili" ? "Talent Monitoring" : "Feed"}
+          {t === "profili" ? "Competitor Monitoring" : "Feed"}
         </button>
       ))}
     </div>
@@ -266,7 +266,7 @@ function InfluencerView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => void 
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Cerca influencer, cliente o account…"
+            placeholder="Cerca competitor…"
             className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm text-foreground outline-none focus:border-primary"
           />
         </div>
@@ -839,9 +839,9 @@ function InfluencerFeedView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => v
   const header = (
     <header className="flex flex-wrap items-start justify-between gap-4">
       <div className="space-y-2">
-        <h1 className="font-display text-3xl font-bold sm:text-4xl">Talent Monitoring</h1>
+        <h1 className="font-display text-3xl font-bold sm:text-4xl">Competitor Monitoring</h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Post recenti dagli influencer monitorati su Instagram e TikTok.
+          Post recenti dai competitor monitorati su Instagram e TikTok.
         </p>
       </div>
       <SyncButton endpoint={GITHUB_SYNC_ENDPOINT} label="↻ Sincronizza ora" />
@@ -932,7 +932,7 @@ function InfluencerFeedView({ tab, setTab }: { tab?: Tab; setTab?: (t: Tab) => v
         <div className="relative flex-1 min-w-[220px]">
           <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <input
-            placeholder="Cerca influencer, cliente, account o caption…"
+            placeholder="Cerca competitor…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-lg border border-border bg-background/60 py-2 pl-9 pr-3 text-sm outline-none focus:border-primary"
