@@ -83,7 +83,7 @@ function Page() {
       {loading ? (
         <div className="text-sm text-muted-foreground">Caricamento…</div>
       ) : (
-        <TrendGrid items={allItems} dbIds={dbIds} onDelete={handleDelete} onScoreChange={handleScoreChange} showScore hideCategoryFilter hideCategory hideScoreFilter />
+        <TrendGrid items={allItems} dbIds={dbIds} onDelete={handleDelete} onScoreChange={handleScoreChange} hideCategoryFilter hideCategory hideScoreFilter />
       )}
     </div>
   );
