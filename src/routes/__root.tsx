@@ -145,10 +145,10 @@ function Navbar() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 sm:px-6 lg:px-10">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src="/brand/logo-full-v2.png" alt="Trendzn" className="h-7 w-auto" />
+        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img src="/brand/logo-full-v2.png" alt="Trendzn" className="h-6 w-auto flex-shrink-0" />
           <span className="font-display text-sm font-semibold text-muted-foreground">x</span>
-          <img src="/brand/trufru-logo.svg" alt="trüfrü" className="h-6 w-auto" />
+          <img src="/brand/trufru-logo.svg" alt="trüfrü" className="h-6 w-auto flex-shrink-0" />
         </Link>
 
         {/* Desktop nav */}
