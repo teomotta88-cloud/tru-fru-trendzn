@@ -23,7 +23,7 @@ import {
 
 // Profilo Trü Frü Italia
 const FALLBACK_PROFILE = {
-  avatar: "https://images.unsplash.com/photo-1599599810694-b5ac4dd33feq?w=500&h=500&fit=crop",
+  avatar: "/brand/trufru-product.jpg",
   handle: "trufru_it",
   name: "Trü Frü Italia IT",
   bio: "Cibo e bevande\nSiamo frutta vera ricoperta di delizioso cioccolato 💎❤️\nFrozen snack ❄️\nDisponibile in Ipercoop, Iper, Conad, Migross, Tigros, Aspiag, Alf, Unes",
