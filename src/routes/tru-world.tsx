@@ -79,7 +79,7 @@ function Page() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ WORLD</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Un universo visivo che valorizza l'iconico pack Trü Frü e tutto ciò che rappresenta: qualità premium, ingredienti reali ed esperienza indulgente.
+            Un universo visivo che valorizza l'iconico pack Trü Frü e tutto ciò che rappresenta: qualità premium, ingredienti reali ed esperienza indulgente. Il brand diventa protagonista, simbolo di piacere autentico e distintivo.
           </p>
         </div>
         <ManualSubmitDialog section="trend-attuali" onSuccess={fetchRows} />
