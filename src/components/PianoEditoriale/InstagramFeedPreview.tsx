@@ -21,17 +21,16 @@ import {
   listClientChannels,
 } from "@/lib/editorialPlan";
 
-// Placeholder mostrato finché non c'è ancora un canale cliente Instagram
-// scrapato con successo in "Canali cliente" — non è mai il profilo reale.
+// Profilo Trü Frü Italia
 const FALLBACK_PROFILE = {
-  avatar: "/brand/trufru-logo.svg",
-  handle: "iltuobrand",
-  name: "Il tuo brand",
-  bio: "Collega un canale cliente Instagram in \"Canali cliente\" per vedere qui il profilo reale.",
-  linkUrl: "",
-  posts: "—",
-  followers: "—",
-  following: "—",
+  avatar: "https://images.unsplash.com/photo-1599599810694-b5ac4dd33feq?w=500&h=500&fit=crop",
+  handle: "trufru_it",
+  name: "Trü Frü Italia IT",
+  bio: "Cibo e bevande\nSiamo frutta vera ricoperta di delizioso cioccolato 💎❤️\nFrozen snack ❄️\nDisponibile in Ipercoop, Iper, Conad, Migross, Tigros, Aspiag, Alf, Unes",
+  linkUrl: "www.trufru.global/it-it",
+  posts: "55",
+  followers: "3121",
+  following: "14",
 };
 
 function isVideo(url: string, type: string | null | undefined) {
