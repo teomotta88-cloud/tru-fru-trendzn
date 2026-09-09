@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 
 export const Route = createFileRoute("/influencer/$id")({
   head: () => ({
-    meta: [{ title: "Talent Monitoring — Trü Frü" }, { name: "description", content: "Profilo influencer monitorato." }],
+    meta: [{ title: "Competitor Monitoring — Trü Frü" }, { name: "description", content: "Profili competitor monitorato." }],
   }),
   component: Page,
 });
@@ -198,7 +198,7 @@ function Page() {
       <div className="py-20 text-center">
         <h1 className="font-display text-2xl font-bold">Profilo non trovato</h1>
         <Link to="/influencer" className="mt-4 inline-block text-primary">
-          Torna agli influencer
+          Torna ai competitor
         </Link>
       </div>
     );
@@ -218,7 +218,7 @@ function Page() {
         to="/influencer"
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> Tutti gli influencer
+        <ArrowLeft className="size-4" /> Tutti i competitor
       </Link>
 
       <header className="flex flex-col items-center gap-5 rounded-3xl border border-border bg-gradient-to-br from-card to-secondary/40 p-8 sm:flex-row sm:items-start sm:gap-8">
@@ -287,7 +287,7 @@ function Page() {
         {allPosts.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center">
             <p className="text-sm text-muted-foreground">
-              Nessun post embeddabile per questo profilo ancora.
+              Nessun post incorporabile per questo profilo ancora.
               <br />
               Il sync automatico aggiungerà qui i nuovi post non appena disponibili.
             </p>
