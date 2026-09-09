@@ -59,12 +59,12 @@ export function InstagramFeedPreview({ posts }: { posts: EditorialPost[] }) {
     };
   }, []);
 
-  const PROFILE = igChannel
+  const PROFILE = igChannel && igChannel.avatar_url && igChannel.followers_count
     ? {
-        avatar: igChannel.avatar_url || FALLBACK_PROFILE.avatar,
+        avatar: igChannel.avatar_url,
         handle: igChannel.handle,
         name: igChannel.display_name || igChannel.handle,
-        bio: igChannel.bio || (igChannel.scraped_at ? "" : "Scraping del profilo in corso o non riuscito."),
+        bio: igChannel.bio || "",
         linkUrl: igChannel.url,
         posts: igChannel.posts_count || "—",
         followers: igChannel.followers_count || "—",
