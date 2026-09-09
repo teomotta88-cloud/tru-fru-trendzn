@@ -79,7 +79,7 @@ function Page() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ PEOPLE</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Contenuti duraturi che oggi sono diventati parte di un vero e proprio linguaggio dei social e che possono evolvere in rubriche, format editoriali e nuovi territori di comunicazione.
+            Persone curiose e fedeli a sé stesse che trovano equilibrio nei piccoli piaceri quotidiani. Per loro, concedersi un momento Trü Frü non è un'eccezione, ma parte di uno stile di vita consapevole e senza compromessi.
           </p>
         </div>
         <ManualSubmitDialog section="trend-evergreen" onSuccess={fetchRows} />
