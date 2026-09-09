@@ -79,8 +79,7 @@ function Page() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ WORLD</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Da realizzare entro 2-4 settimane. Trend social (TT o IG) con durata un po' più lunga.{"\n"}
-            Reinterpretabili e adattabili al Tone of Voice e all'identity del brand.
+            Un universo visivo che valorizza l'iconico pack Trü Frü e tutto ciò che rappresenta: qualità premium, ingredienti reali ed esperienza indulgente.
           </p>
         </div>
         <ManualSubmitDialog section="trend-attuali" onSuccess={fetchRows} />
