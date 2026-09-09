@@ -79,8 +79,7 @@ function Page() {
         <div className="space-y-2">
           <h1 className="font-display text-3xl font-bold sm:text-4xl">TRÜ TASTE</h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Trend in forte accelerazione che richiedono un'attivazione immediata. Da realizzare entro 1-2 giorni.{"\n"}
-            Conta più la velocità di realizzazione che il crafting minuzioso.
+            Il momento in cui il morso rivela tutta la magia di Trü Frü: il crock irresistibile, la frutta vera e la perfetta combinazione con il cioccolato. Una celebrazione della golosità che mette il prodotto al centro della scena.
           </p>
         </div>
         <ManualSubmitDialog section="trend-real-time" onSuccess={fetchRows} />
