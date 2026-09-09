@@ -40,11 +40,11 @@ function Index() {
       blurb: "Persone curiose e fedeli a se stesse che trovano equilibrio nei piccoli piaceri quotidiani.",
     },
     {
-      to: "/influencer",
-      label: "Competitor Monitoring",
+      to: "/competitor",
+      label: "Competitor",
       //count: influencer.length,
       icon: Sparkles,
-      blurb: "Monitoraggio Competitor - Real Time",
+      blurb: "Monitoraggio Brand e Competitor - Real Time",
     },
     {
       to: "/piano-editoriale",

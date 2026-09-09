@@ -134,7 +134,7 @@ const NAV_ITEMS = [
   { to: "/tru-taste", label: "TRÜ TASTE" },
   { to: "/tru-world", label: "TRÜ WORLD" },
   { to: "/tru-people", label: "TRÜ PEOPLE" },
-  { to: "/influencer", label: "Competitor" },
+  { to: "/competitor", label: "Competitor" },
   { to: "/piano-editoriale", label: "Piano Editoriale" },
 ];
 
