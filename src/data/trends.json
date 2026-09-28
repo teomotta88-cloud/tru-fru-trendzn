@@ -390,13 +390,6 @@
         {
           "platform": "instagram",
           "handle": "franui.it",
-          "url": "https://www.instagram.com/p/Dc34a5nlXKy/",
-          "date": "2026-09-04T17:04:58+00:00",
-          "caption": "Decisamente l&rsquo;Oscar se lo aggiudica Franu&iacute;! 👏🥇\n\n#UniciPerNatura"
-        },
-        {
-          "platform": "instagram",
-          "handle": "franui.it",
           "url": "https://www.instagram.com/p/Dc1ae0CiC_t/",
           "date": "2026-09-03T18:12:33+00:00",
           "caption": "La nostra ricetta non ha segreti: ha una storia di famiglia. Scoprila in questo episodio! 🏔️✨"
@@ -491,6 +484,13 @@
           "url": "https://www.instagram.com/p/Dd0xP79uL7T/",
           "date": "2026-09-28T08:38:35+00:00",
           "caption": "Cosa c&#039;&egrave; di pi&ugrave; delizioso di una serata fra amici? una serata fra amici, con @franui.it !\n\nQuali sono i vostri preferiti?\n\n\n\n*adv \n\n#franui"
+        },
+        {
+          "platform": "instagram",
+          "handle": "franui.it",
+          "url": "https://www.instagram.com/p/Dd1y-N1CEpB/",
+          "date": "2026-09-28T18:10:33+00:00",
+          "caption": "Non solo ce li meritiamo, ne abbiamo BISOGNO. Subito. 🙏"
         }
       ]
     },
@@ -513,13 +513,6 @@
           "platform": "instagram",
           "handle": "trufru",
           "url": "https://www.instagram.com/trufru/"
-        },
-        {
-          "platform": "tiktok",
-          "handle": "trufru",
-          "url": "https://www.tiktok.com/@trufru/video/7677651848412679455",
-          "date": null,
-          "caption": "Best way to start the week #trufru #besties \n\n8331 views"
         },
         {
           "platform": "tiktok",
@@ -618,6 +611,13 @@
           "url": "https://www.tiktok.com/@trufru/video/7689537286953880845",
           "date": null,
           "caption": "Sometimes “A” knows what’s up😉🍓#trufru \n\n716 views"
+        },
+        {
+          "platform": "tiktok",
+          "handle": "trufru",
+          "url": "https://www.tiktok.com/@trufru/video/7690661244449148174",
+          "date": null,
+          "caption": "The ultimate betrayal😉🍓#trufru \n\n393 views"
         }
       ]
     }
