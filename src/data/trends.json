@@ -390,13 +390,6 @@
         {
           "platform": "instagram",
           "handle": "franui.it",
-          "url": "https://www.instagram.com/p/Dcy0EmzFbJ1/",
-          "date": "2026-09-02T17:50:46+00:00",
-          "caption": "Sono loro a percorrere le piantagioni per scegliere i lamponi migliori.\n\nMani esperte 🤝 al servizio del miglior prodotto del mondo."
-        },
-        {
-          "platform": "instagram",
-          "handle": "franui.it",
           "url": "https://www.instagram.com/p/DcwMou0qLQ2/",
           "date": "2026-09-01T17:27:49+00:00",
           "caption": "👀 Consiglio: fai scorta prima di ogni episodio 🍫"
@@ -491,6 +484,13 @@
           "url": "https://www.instagram.com/p/Dd4QAZ1lbE6/",
           "date": "2026-09-29T17:02:28+00:00",
           "caption": "Sembra tutto uscito da un film, ma in realt&agrave; sono semplicemente i nostri ingredienti. ❤️"
+        },
+        {
+          "platform": "instagram",
+          "handle": "franui.it",
+          "url": "https://www.instagram.com/p/Dd64Ow2t4Ja/",
+          "date": "2026-09-30T17:33:50+00:00",
+          "caption": "Questa &egrave; l&rsquo;unica cosa che troverai nella mia borsa 🙃"
         }
       ]
     },
@@ -513,13 +513,6 @@
           "platform": "instagram",
           "handle": "trufru",
           "url": "https://www.instagram.com/trufru/"
-        },
-        {
-          "platform": "tiktok",
-          "handle": "trufru",
-          "url": "https://www.tiktok.com/@trufru/video/7683610432313085197",
-          "date": null,
-          "caption": "Always coming back for Trü Frü hehe🫶🍓🍫 #trufru \n\n974 views"
         },
         {
           "platform": "tiktok",
@@ -618,6 +611,13 @@
           "url": "https://www.tiktok.com/@trufru/video/7690661244449148174",
           "date": null,
           "caption": "The ultimate betrayal😉🍓#trufru \n\n393 views"
+        },
+        {
+          "platform": "tiktok",
+          "handle": "trufru",
+          "url": "https://www.tiktok.com/@trufru/video/7691395230884531486",
+          "date": null,
+          "caption": "Can you blame her??🤭🍓#trufru \n\n513 views"
         }
       ]
     }
